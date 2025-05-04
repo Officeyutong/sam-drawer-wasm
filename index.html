@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/semantic-ui/2.3.3/semantic.min.js"></script>
+    <link href="https://cdn.staticfile.org/semantic-ui/2.3.3/semantic.min.css" rel="stylesheet">
+    <title>SAM Drawer</title>
+<link rel="modulepreload" href="/sam-drawer-wasm-rs-80a3242164084799.js" crossorigin="anonymous" integrity="sha384-McGr0u9jiT1CFLFIWgv+07qQXqVqduX/lWH6bfyjxNQGodVSh8iOgiFU6wes6fVx"><link rel="preload" href="/sam-drawer-wasm-rs-80a3242164084799_bg.wasm" crossorigin="anonymous" integrity="sha384-17xMVIKye1eRNxPCvlx67mkr1asGgTO2okqXphc02YYrV1JyQJeBXzOXzLX/4H76" as="fetch" type="application/wasm"></head>
+
+<body style="background-color: rgb(236, 233, 233)">
+<script type="module">
+import init, * as bindings from '/sam-drawer-wasm-rs-80a3242164084799.js';
+const wasm = await init({ module_or_path: '/sam-drawer-wasm-rs-80a3242164084799_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+
+</html>
