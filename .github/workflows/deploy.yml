@@ -18,7 +18,7 @@ jobs:
           rustup target add wasm32-unknown-unknown
 
       - name: Build with Trunk
-        run: trunk build --release
+        run: trunk build --release --public-url /sam-drawer-wasm
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
